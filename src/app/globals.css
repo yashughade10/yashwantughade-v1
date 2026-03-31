@@ -128,3 +128,36 @@
     @apply font-sans;
   }
 }
+
+.liquid-card {
+  --x: 50%;
+  --y: 50%;
+}
+
+/* Main liquid effect */
+.liquid-bg {
+  background: radial-gradient(
+      circle at var(--x) var(--y),
+      rgba(96, 165, 250, 0.6),
+      rgba(168, 85, 247, 0.5),
+      rgba(244, 114, 182, 0.4),
+      transparent 60%
+    ),
+    conic-gradient(
+      from 0deg,
+      #60a5fa,
+      #a78bfa,
+      #f472b6,
+      #34d399,
+      #60a5fa
+    );
+
+  filter: blur(40px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Show on hover */
+.liquid-card:hover .liquid-bg {
+  opacity: 1;
+}
