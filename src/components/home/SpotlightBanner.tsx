@@ -1,31 +1,38 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Link as LinkIcon } from "lucide-react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Link } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const SpotlightBanner = () => {
     useEffect(() => {
         const all = document.querySelectorAll(".spotlight-card");
 
-        const handleMouseMove = (ev: MouseEvent) => {
-            all.forEach((e) => {
-                const blob = e.querySelector(".blob") as HTMLElement;
-                const fblob = e.querySelector(".fake-blob") as HTMLElement;
+        const handleMouseMove = (event: MouseEvent) => {
+            all.forEach((element) => {
+                const blob = element.querySelector(".blob") as HTMLElement | null;
+                const fakeBlob = element.querySelector(
+                    ".fake-blob"
+                ) as HTMLElement | null;
 
-                if (!blob || !fblob) return;
+                if (!blob || !fakeBlob) {
+                    return;
+                }
 
-                const rec = fblob.getBoundingClientRect();
+                const rect = fakeBlob.getBoundingClientRect();
 
                 blob.style.opacity = "1";
-
                 blob.animate(
                     [
                         {
                             transform: `translate(${
-                                ev.clientX - rec.left - rec.width / 2
-                            }px, ${ev.clientY - rec.top - rec.height / 2}px)`,
+                                event.clientX - rect.left - rect.width / 2
+                            }px, ${
+                                event.clientY - rect.top - rect.height / 2
+                            }px)`,
                         },
                     ],
                     {
@@ -45,41 +52,43 @@ const SpotlightBanner = () => {
 
     return (
         <div className="w-full">
-            <div className="relative group w-full">
-                <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 opacity-60 blur-md group-hover:opacity-100 transition duration-500"></div>
+            <div className="group relative w-full">
+                <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-sky-500 via-purple-500 to-pink-500 opacity-60 blur-md transition duration-500 group-hover:opacity-100"></div>
 
-                <Card className="relative w-full rounded-2xl bg-[#111] border border-white/10 backdrop-blur-xl transition-all duration-500 group-hover:shadow-2xl">
+                <Card className="relative w-full rounded-2xl border border-white/10 bg-[#111] backdrop-blur-xl transition-all duration-500 group-hover:shadow-2xl">
                     <CardContent className="p-4 sm:p-6">
-                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                            <div className="flex items-center gap-4 min-w-0">
+                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                            <div className="flex min-w-0 items-center gap-4">
                                 <div className="relative shrink-0">
-                                    <img
-                                        src="./profile-yellow-bg.png"
+                                    <Image
+                                        src="/profile-yellow-bg.png"
                                         alt="Profile"
-                                        className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white/20 object-cover"
+                                        width={80}
+                                        height={80}
+                                        className="h-16 w-16 rounded-full border-4 border-white/20 object-cover sm:h-20 sm:w-20"
                                     />
                                 </div>
 
                                 <div className="min-w-0">
-                                    <h2 className="text-white text-lg sm:text-xl font-semibold truncate">
+                                    <h2 className="truncate text-lg font-semibold text-white sm:text-xl">
                                         Yashwant Ughade
                                     </h2>
-                                    <p className="text-gray-400 text-xs sm:text-sm">
+                                    <p className="text-xs text-gray-400 sm:text-sm">
                                         Full Stack Developer
                                     </p>
                                 </div>
                             </div>
 
                             <div className="flex sm:justify-end">
-                                <a
+                                <Link
                                     href="https://www.linkedin.com/in/yashwant-ughade-a04682220/"
                                     target="_blank"
+                                    rel="noreferrer"
+                                    className="flex items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:from-sky-400 hover:to-blue-500 hover:shadow-lg sm:px-5 sm:py-2.5 sm:text-base"
                                 >
-                                    <button className="flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg text-sm sm:text-base font-medium transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap">
-                                        <Link size={18} />
-                                        Connect With Me
-                                    </button>
-                                </a>
+                                    <LinkIcon size={18} />
+                                    Connect With Me
+                                </Link>
                             </div>
                         </div>
                     </CardContent>

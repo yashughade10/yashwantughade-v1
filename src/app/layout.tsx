@@ -2,24 +2,12 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import {
-    SidebarInset,
-    SidebarProvider,
-    SidebarTrigger,
-} from "@/components/ui/sidebar";
-import { Separator } from "radix-ui";
-import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppHeader } from "@/components/app-header";
 import { ThemeProvider } from "next-themes";
+import TerminalModal from "@/components/home/TerminalModal";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -35,7 +23,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     title: "Yashwant Ughade",
-    description: "Experienced Full-stack developer, building user-focused applications.",
+    description:
+        "Experienced Full-stack developer, building user-focused applications.",
 };
 
 export default function RootLayout({
@@ -61,6 +50,7 @@ export default function RootLayout({
                     defaultTheme="dark"
                     enableSystem
                 >
+                    <TerminalModal />
                     <TooltipProvider>
                         <SidebarProvider>
                             <AppSidebar />

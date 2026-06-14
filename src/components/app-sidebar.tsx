@@ -28,7 +28,7 @@ import Link from "next/link";
 
 type NavItem = {
     title: string;
-    url: string;
+    url: `/${string}` | `#${string}` | `https://${string}`;
     icon?: React.ReactNode;
     isActive?: boolean;
 };
@@ -48,21 +48,25 @@ const data: { navMain: NavGroup[] } = {
                 {
                     title: "Home",
                     url: "/",
+                    // icon: <Home1 height={24} width={24} strokeWidth={0} color={"#FCFCFD"} />,
                     icon: <Home />,
                 },
                 {
                     title: "About",
                     url: "/about",
+                    // icon: <IdCard height={24} width={24} strokeWidth={0} color={"#FCFCFD"} />,
                     icon: <User2Icon />,
                 },
                 {
                     title: "Blogs",
                     url: "/blogs",
+                    // icon: <Wishlist2 height={24} width={24} strokeWidth={0} color={"#FCFCFD"} />,
                     icon: <Blocks />,
                 },
                 {
                     title: "Projects",
                     url: "/projects",
+                    // icon: <Description height={24} width={24} strokeWidth={0} color={"#FCFCFD"} />,
                     icon: <List />,
                 },
             ],
