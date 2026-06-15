@@ -1,25 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
+import { ThemeProvider } from "next-themes";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppHeader } from "@/components/app-header";
-import { ThemeProvider } from "next-themes";
 import TerminalModal from "@/components/home/TerminalModal";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
+import "./globals.css";
 
 export const metadata: Metadata = {
     title: "Yashwant Ughade",
@@ -33,18 +20,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html
-            lang="en"
-            className={cn(
-                "h-full",
-                "antialiased",
-                geistSans.variable,
-                geistMono.variable,
-                "font-sans",
-                inter.variable
-            )}
-        >
-            <body className="min-h-full flex flex-col">
+        <html lang="en" className="h-full antialiased">
+            <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
