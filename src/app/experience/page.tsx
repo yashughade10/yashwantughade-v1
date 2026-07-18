@@ -119,7 +119,7 @@ export default function ExperiencePage() {
             role: "Software Developer – I",
             company: "TBP CODOT",
             period: "August 2024 – Present",
-            location: "Bangalore, India (Remote)",
+            location: "Bangalore, India",
             description: "Designing, building, and deploying highly functional frontend layouts, backend engines, and database environments for high-traffic multi-tenant SaaS products and AI services.",
             products: [
                 {

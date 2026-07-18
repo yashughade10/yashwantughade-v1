@@ -84,7 +84,7 @@ export default function Home() {
                     <div className="space-y-3 text-sm">
                         <div className="flex justify-between py-2 border-b border-border/50">
                             <span className="text-muted-foreground">Location</span>
-                            <span className="font-medium">Bangalore, India (Remote)</span>
+                            <span className="font-medium">Bangalore, India</span>
                         </div>
                         <div className="flex justify-between py-2 border-b border-border/50">
                             <span className="text-muted-foreground">Education</span>
@@ -193,7 +193,31 @@ export default function Home() {
                         </ul>
                     </div>
 
-                    {/* Position 3: AEONS */}
+                    {/* Position 3: DealsDray */}
+                    <div className="relative animate-in fade-in slide-in-from-left-4 duration-450">
+                        <span className="absolute -left-[31px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-orange-500 ring-4 ring-background" />
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+                            <div>
+                                <h3 className={`${outfit.className} text-lg font-bold text-foreground`}>
+                                    Full Stack Developer Intern
+                                </h3>
+                                <div className="text-sm font-semibold text-primary mt-0.5">
+                                    DealsDray Online Pvt. Ltd.
+                                </div>
+                            </div>
+                            <div className={`${figtree.className} text-xs font-semibold px-2.5 py-1 rounded-full bg-muted text-muted-foreground border border-border md:self-start`}>
+                                Internship
+                            </div>
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-1">Bangalore, India</p>
+                        <ul className="mt-3 space-y-2 text-sm text-muted-foreground list-disc pl-4">
+                            <li>Worked on a large-scale internal Warehouse Management System (WMS) supporting Vendor Management, Inventory Tracking, and Sales Lifecycles.</li>
+                            <li>Built and enhanced frontend features and server-side logic using React.js, Node.js, Express.js, MongoDB, and REST APIs.</li>
+                            <li>Resolved key production bugs, improved loading speeds, and supported day-to-day warehouse operations.</li>
+                        </ul>
+                    </div>
+
+                    {/* Position 4: AEONS */}
                     <div className="relative animate-in fade-in slide-in-from-left-4 duration-500">
                         <span className="absolute -left-[31px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-purple-500 ring-4 ring-background" />
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
