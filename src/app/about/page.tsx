@@ -15,6 +15,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { inter, figtree, outfit } from "@/lib/fonts";
+import { getSkillColor } from "@/lib/skillColors";
 
 export default function AboutPage() {
     const skills = {
@@ -98,7 +99,7 @@ export default function AboutPage() {
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {skills.languages.map((lang) => (
-                                <span key={lang} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg bg-secondary border border-border text-foreground`}>
+                                <span key={lang} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg border ${getSkillColor(lang)}`}>
                                     {lang}
                                 </span>
                             ))}
@@ -113,7 +114,7 @@ export default function AboutPage() {
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {skills.frontend.map((item) => (
-                                <span key={item} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg bg-secondary border border-border text-foreground`}>
+                                <span key={item} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg border ${getSkillColor(item)}`}>
                                     {item}
                                 </span>
                             ))}
@@ -128,7 +129,7 @@ export default function AboutPage() {
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {skills.backend.map((item) => (
-                                <span key={item} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg bg-secondary border border-border text-foreground`}>
+                                <span key={item} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg border ${getSkillColor(item)}`}>
                                     {item}
                                 </span>
                             ))}
@@ -143,7 +144,7 @@ export default function AboutPage() {
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {skills.databases.map((item) => (
-                                <span key={item} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg bg-secondary border border-border text-foreground`}>
+                                <span key={item} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg border ${getSkillColor(item)}`}>
                                     {item}
                                 </span>
                             ))}
@@ -158,7 +159,7 @@ export default function AboutPage() {
                         </div>
                         <div className="flex flex-wrap gap-2">
                             {skills.tools.map((item) => (
-                                <span key={item} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg bg-secondary border border-border text-foreground`}>
+                                <span key={item} className={`${figtree.className} px-2.5 py-1 text-xs font-semibold rounded-lg border ${getSkillColor(item)}`}>
                                     {item}
                                 </span>
                             ))}

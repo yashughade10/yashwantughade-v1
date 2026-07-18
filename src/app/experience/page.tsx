@@ -7,6 +7,7 @@ import {
     MapPin
 } from "lucide-react";
 import { inter, figtree, outfit } from "@/lib/fonts";
+import { getSkillColor } from "@/lib/skillColors";
 
 interface ProductProps {
     name: string;
@@ -45,7 +46,7 @@ function ProductHighlight({ name, description, details, tech }: ProductProps) {
                 {tech.map((t) => (
                     <span 
                         key={t} 
-                        className={`${figtree.className} px-2.5 py-0.5 text-[10px] font-bold bg-secondary text-secondary-foreground border border-border/80 rounded-md`}
+                        className={`${figtree.className} px-2.5 py-0.5 text-[10px] font-bold border rounded-md ${getSkillColor(t)}`}
                     >
                         {t}
                     </span>
