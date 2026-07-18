@@ -82,7 +82,7 @@ const SpotlightBanner = () => {
                                     href="https://www.linkedin.com/in/yashwant-ughade-a04682220/"
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="flex items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-gradient-to-r from-primary to-accent px-4 py-2 text-sm font-medium text-primary-foreground shadow-md transition-all duration-300 hover:opacity-90 hover:shadow-lg sm:px-5 sm:py-2.5 sm:text-base"
+                                    className="flex items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-md transition-all duration-300 hover:opacity-90 hover:shadow-lg sm:px-5 sm:py-2.5 sm:text-base"
                                 >
                                     <LinkIcon size={18} />
                                     Connect With Me
