@@ -3,6 +3,7 @@
 import React from "react";
 import { Eye, ListCollapse } from "lucide-react";
 import Image from "next/image";
+import { inter, figtree, outfit } from "@/lib/fonts";
 
 interface ProjectProps {
     title: string;
@@ -37,12 +38,12 @@ function ProjectCard(props: ProjectProps) {
                 </div>
 
                 <div className="p-4 space-y-3">
-                    <h2 className="title-font text-lg font-bold text-foreground font-heading tracking-tight">{props.title}</h2>
+                    <h2 className={`${outfit.className} text-lg font-bold text-foreground tracking-tight`}>{props.title}</h2>
                     <p className="leading-relaxed text-sm text-muted-foreground h-[100px] overflow-y-auto pr-1 scrollbar-thin">
                         {props.details}
                     </p>
                     <div className="flex flex-wrap items-center pt-2">
-                        <a href={props.github} target="_blank" rel="noreferrer" className="text-primary hover:text-indigo-400 font-semibold text-sm inline-flex items-center cursor-pointer gap-1.5 transition-colors">
+                        <a href={props.github} target="_blank" rel="noreferrer" className={`${figtree.className} text-primary hover:text-indigo-400 font-semibold text-sm inline-flex items-center cursor-pointer gap-1.5 transition-colors`}>
                             {props.more}
                             <svg className="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M5 12h14"></path>
@@ -85,10 +86,10 @@ export default function ProjectsPage() {
     ];
 
     return (
-        <section className="space-y-8 px-4 py-6 md:px-8 max-w-7xl mx-auto">
+        <section className={`${inter.className} space-y-8 w-full py-2`}>
             {/* Header */}
             <div className="space-y-3 border-b border-border pb-4">
-                <h1 className="text-3xl md:text-4xl font-bold font-heading text-foreground flex items-center gap-2">
+                <h1 className={`${outfit.className} text-3xl md:text-4xl font-bold text-foreground flex items-center gap-2`}>
                     <ListCollapse className="text-primary" size={28} />
                     Projects
                 </h1>

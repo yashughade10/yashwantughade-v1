@@ -52,11 +52,14 @@
   /* 🌞 LIGHT THEME (inverted usage for readability) */
 
   /* Main backgrounds */
-  --background: #EBD5AB; /* Page background */
-  --foreground: #1B211A; /* Main text */
+  --background: #EBD5AB;
+  /* Page background */
+  --foreground: #1B211A;
+  /* Main text */
 
   /* Cards / containers */
-  --card: #F5E6C8; /* Slightly lighter than background */
+  --card: #F5E6C8;
+  /* Slightly lighter than background */
   --card-foreground: #1B211A;
 
   /* Popovers / modals */
@@ -64,11 +67,14 @@
   --popover-foreground: #1B211A;
 
   /* 🔥 Primary (CTA buttons, main actions) */
-  --primary: #8BAE66; /* Buttons */
-  --primary-foreground: #1B211A; /* Text on buttons */
+  --primary: #8BAE66;
+  /* Buttons */
+  --primary-foreground: #1B211A;
+  /* Text on buttons */
 
   /* Secondary elements */
-  --secondary: #DCC89A; /* subtle sections */
+  --secondary: #DCC89A;
+  /* subtle sections */
   --secondary-foreground: #1B211A;
 
   /* Muted (less important text) */
@@ -85,7 +91,8 @@
   /* Borders & inputs */
   --border: #D6C49A;
   --input: #D6C49A;
-  --ring: #8BAE66; /* focus ring */
+  --ring: #8BAE66;
+  /* focus ring */
 
   /* Charts (optional usage) */
   --chart-1: #8BAE66;
@@ -111,11 +118,14 @@
   /* 🌙 DARK THEME (your main vibe) */
 
   /* Main backgrounds */
-  --background: #1B211A; /* Main app background */
-  --foreground: #EBD5AB; /* Main text */
+  --background: #1B211A;
+  /* Main app background */
+  --foreground: #EBD5AB;
+  /* Main text */
 
   /* Cards / containers */
-  --card: #222A20; /* Slightly lighter than bg */
+  --card: #222A20;
+  /* Slightly lighter than bg */
   --card-foreground: #EBD5AB;
 
   /* Popovers / modals */
@@ -170,9 +180,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
@@ -185,21 +197,17 @@
 
 /* Main liquid effect */
 .liquid-bg {
-  background: radial-gradient(
-      circle at var(--x) var(--y),
+  background: radial-gradient(circle at var(--x) var(--y),
       rgba(96, 165, 250, 0.6),
       rgba(168, 85, 247, 0.5),
       rgba(244, 114, 182, 0.4),
-      transparent 60%
-    ),
-    conic-gradient(
-      from 0deg,
+      transparent 60%),
+    conic-gradient(from 0deg,
       #60a5fa,
       #a78bfa,
       #f472b6,
       #34d399,
-      #60a5fa
-    );
+      #60a5fa);
 
   filter: blur(40px);
   opacity: 0;
@@ -239,10 +247,12 @@
 }
 
 @keyframes launch-float {
+
   0%,
   100% {
     transform: translate3d(0, 0, 0) scale(1);
   }
+
   50% {
     transform: translate3d(0, -18px, 0) scale(1.05);
   }
@@ -253,6 +263,7 @@
     opacity: 0;
     transform: translateY(18px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -263,6 +274,7 @@
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: 72px 72px;
   }

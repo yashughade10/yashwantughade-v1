@@ -13,7 +13,7 @@ import {
     SidebarRail,
 } from "@/components/ui/sidebar";
 import {
-    Blocks,
+    Briefcase,
     CodeXml,
     Command,
     GitBranch,
@@ -25,6 +25,7 @@ import {
     User2Icon,
 } from "lucide-react";
 import Link from "next/link";
+import { inter, figtree, outfit } from "@/lib/fonts";
 
 type NavItem = {
     title: string;
@@ -58,10 +59,9 @@ const data: { navMain: NavGroup[] } = {
                     icon: <User2Icon />,
                 },
                 {
-                    title: "Blogs",
-                    url: "/blogs",
-                    // icon: <Wishlist2 height={24} width={24} strokeWidth={0} color={"#FCFCFD"} />,
-                    icon: <Blocks />,
+                    title: "Experience",
+                    url: "/experience",
+                    icon: <Briefcase />,
                 },
                 {
                     title: "Projects",
@@ -108,7 +108,7 @@ const data: { navMain: NavGroup[] } = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     return (
-        <Sidebar collapsible="icon" {...props}>
+        <Sidebar collapsible="icon" className={inter.className} {...props}>
             <SidebarHeader>
                 <SidebarMenu>
                     <SidebarMenuItem>
@@ -118,7 +118,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                     <Command className="size-4" />
                                 </div>
                                 <div className="grid flex-1 text-left text-sm leading-tight">
-                                    <span className="truncate font-medium">
+                                    <span className={`truncate font-bold ${outfit.className}`}>
                                         Yashwant Ughade
                                     </span>
                                     <span className="truncate text-xs">
@@ -133,7 +133,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             <SidebarContent>
                 {data.navMain.map((item) => (
                     <SidebarGroup key={item.title}>
-                        <SidebarGroupLabel className="">
+                        <SidebarGroupLabel className={`${figtree.className} font-semibold text-xs tracking-wider`}>
                             {item.title}
                         </SidebarGroupLabel>
                         <SidebarGroupContent>

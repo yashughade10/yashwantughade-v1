@@ -10,9 +10,9 @@ import { ContactModal } from "@/components/contact-modal";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    title: "Yashwant Ughade",
+    title: "Yashwant Ughade | Full Stack Software Engineer",
     description:
-        "Experienced Full-stack developer, building user-focused applications.",
+        "Portfolio of Yashwant Ughade - Full Stack Software Engineer specializing in building scalable software, AI-powered applications, and modern web experiences.",
 };
 
 export default function RootLayout({
@@ -21,21 +21,21 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="h-full antialiased">
+        <html lang="en" className="h-full antialiased" suppressHydrationWarning>
             <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
                     enableSystem
                 >
-                    <TerminalModal />
+                    {/* <TerminalModal /> */}
                     <ContactModal />
                     <TooltipProvider>
                         <SidebarProvider>
                             <AppSidebar />
                             <SidebarInset>
                                 <AppHeader />
-                                <div className="flex flex-1 flex-col gap-4 p-4 px-4 sm:px-6 lg:px-8">
+                                <div className="flex flex-1 flex-col gap-6 p-4 md:p-6 lg:p-8 w-full max-w-6xl mx-auto">
                                     {children}
                                 </div>
                             </SidebarInset>

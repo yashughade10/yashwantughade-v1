@@ -18,13 +18,21 @@ export function ContactModal() {
         if (!name || !email || !message) return;
 
         setStatus("sending");
-        // Simulate API send
+        
+        // Open user's email client pre-filled
+        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+        const body = encodeURIComponent(
+            `Hi Yashwant,\n\nYou have received a message from your portfolio contact form.\n\nFrom: ${name} (${email})\n\nMessage:\n${message}`
+        );
+        
+        window.location.href = `mailto:yashwantughade10@gmail.com?subject=${subject}&body=${body}`;
+
         setTimeout(() => {
             setStatus("success");
             setName("");
             setEmail("");
             setMessage("");
-        }, 1500);
+        }, 1000);
     };
 
     return (
@@ -57,13 +65,13 @@ export function ContactModal() {
 
                             <div className="mt-8 space-y-4">
                                 <a
-                                    href="mailto:yashughade24@gmail.com"
+                                    href="mailto:yashwantughade10@gmail.com"
                                     className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors"
                                 >
                                     <div className="p-2.5 rounded-lg bg-background border border-border">
                                         <Mail size={16} className="text-primary" />
                                     </div>
-                                    <span className="truncate">yashughade24@gmail.com</span>
+                                    <span className="truncate">yashwantughade10@gmail.com</span>
                                 </a>
 
                                 <a
