@@ -5,6 +5,7 @@ import { AppSidebar } from "@/components/app-sidebar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppHeader } from "@/components/app-header";
 import TerminalModal from "@/components/home/TerminalModal";
+import { ContactModal } from "@/components/contact-modal";
 
 import "./globals.css";
 
@@ -28,6 +29,7 @@ export default function RootLayout({
                     enableSystem
                 >
                     <TerminalModal />
+                    <ContactModal />
                     <TooltipProvider>
                         <SidebarProvider>
                             <AppSidebar />

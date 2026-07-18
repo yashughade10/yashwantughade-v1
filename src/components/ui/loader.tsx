@@ -54,7 +54,18 @@ export default function TerminalModal() {
     }, [charIndex, commands, lineIndex, showSuccess]);
 
     useEffect(() => {
-        if (!showSuccess || countdown === null || countdown <= 0) {
+        if (!showSuccess) {
+            return;
+        }
+
+        if (countdown === 0) {
+            const timer = setTimeout(() => {
+                setShowModal(false);
+            }, 0);
+            return () => clearTimeout(timer);
+        }
+
+        if (countdown === null || countdown <= 0) {
             return;
         }
 
@@ -63,12 +74,6 @@ export default function TerminalModal() {
         }, 1000);
 
         return () => clearTimeout(timeout);
-    }, [countdown, showSuccess]);
-
-    useEffect(() => {
-        if (showSuccess && countdown === 0) {
-            setShowModal(false);
-        }
     }, [countdown, showSuccess]);
 
     if (!showModal) {

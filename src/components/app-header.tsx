@@ -5,9 +5,11 @@ import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Moon, Sun } from "lucide-react";
 import { Toggle } from "@/components/ui/toggle";
 import { Button } from "@/components/ui/button";
+import { useContactModal } from "@/hooks/use-contact-modal";
 
 export function AppHeader() {
     const { theme, setTheme } = useTheme();
+    const { openModal } = useContactModal();
 
     return (
         <header className="sticky top-0 z-10 flex py-3 shrink-0 items-center justify-between gap-2 px-4 border-b bg-background shadow-sm">
@@ -27,7 +29,7 @@ export function AppHeader() {
                     )}
                 </Toggle>
 
-                <Button>Contact Me</Button>
+                <Button onClick={openModal}>Contact Me</Button>
             </div>
         </header>
     );
