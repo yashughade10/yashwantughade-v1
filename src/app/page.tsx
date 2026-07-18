@@ -24,7 +24,7 @@ export default function Home() {
                     </div>
 
                     <h1 className={`${outfit.className} text-4xl md:text-6xl font-bold tracking-tight text-foreground leading-tight`}>
-                        Hi, I&apos;m <span className="text-primary">Yashwant Ughade</span>
+                        Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-indigo-400">Yashwant Ughade</span>
                         <br />
                         <span className="text-2xl md:text-4xl font-sans font-medium text-muted-foreground block mt-2">
                             I am a{" "}
@@ -42,7 +42,7 @@ export default function Home() {
                                 wrapper="span"
                                 speed={40}
                                 repeat={Infinity}
-                                className="text-primary font-semibold"
+                                className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500 font-semibold"
                             />
                         </span>
                     </h1>
@@ -54,7 +54,7 @@ export default function Home() {
                     <div className="flex flex-wrap items-center gap-4 pt-2">
                         <button
                             onClick={openModal}
-                            className={`${figtree.className} inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold shadow-lg shadow-primary/20 hover:opacity-95 hover:scale-[1.02] transition-all cursor-pointer`}
+                            className={`${figtree.className} inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-500/20 hover:opacity-95 hover:scale-[1.02] transition-all cursor-pointer`}
                         >
                             <Mail size={18} />
                             Hire Me
@@ -104,29 +104,29 @@ export default function Home() {
 
             {/* Achievement Statistics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 pt-4">
-                <div className="p-5 rounded-2xl bg-card border border-border flex flex-col justify-between shadow-sm hover:border-primary/30 transition-colors">
-                    <Award className="text-primary mb-3" size={24} />
+                <div className="p-5 rounded-2xl bg-card border border-border flex flex-col justify-between shadow-sm hover:border-blue-500/30 transition-colors">
+                    <Award className="text-blue-500 mb-3" size={24} />
                     <div>
                         <div className={`${figtree.className} text-2xl md:text-3xl font-extrabold tracking-tight text-foreground`}>2+ Years</div>
                         <div className="text-xs text-muted-foreground mt-1">Professional Experience</div>
                     </div>
                 </div>
-                <div className="p-5 rounded-2xl bg-card border border-border flex flex-col justify-between shadow-sm hover:border-primary/30 transition-colors">
-                    <Layers className="text-primary mb-3" size={24} />
+                <div className="p-5 rounded-2xl bg-card border border-border flex flex-col justify-between shadow-sm hover:border-emerald-500/30 transition-colors">
+                    <Layers className="text-emerald-500 mb-3" size={24} />
                     <div>
                         <div className={`${figtree.className} text-2xl md:text-3xl font-extrabold tracking-tight text-foreground`}>120+ Screens</div>
                         <div className="text-xs text-muted-foreground mt-1">UI/UX Delivered</div>
                     </div>
                 </div>
-                <div className="p-5 rounded-2xl bg-card border border-border flex flex-col justify-between shadow-sm hover:border-primary/30 transition-colors">
-                    <Users className="text-primary mb-3" size={24} />
+                <div className="p-5 rounded-2xl bg-card border border-border flex flex-col justify-between shadow-sm hover:border-purple-500/30 transition-colors">
+                    <Users className="text-purple-500 mb-3" size={24} />
                     <div>
                         <div className={`${figtree.className} text-2xl md:text-3xl font-extrabold tracking-tight text-foreground`}>10K+</div>
                         <div className="text-xs text-muted-foreground mt-1">Active Users Served</div>
                     </div>
                 </div>
-                <div className="p-5 rounded-2xl bg-card border border-border flex flex-col justify-between shadow-sm hover:border-primary/30 transition-colors">
-                    <Briefcase className="text-primary mb-3" size={24} />
+                <div className="p-5 rounded-2xl bg-card border border-border flex flex-col justify-between shadow-sm hover:border-orange-500/30 transition-colors">
+                    <Briefcase className="text-orange-500 mb-3" size={24} />
                     <div>
                         <div className={`${figtree.className} text-2xl md:text-3xl font-extrabold tracking-tight text-foreground`}>3+</div>
                         <div className="text-xs text-muted-foreground mt-1">Full-stack Workplaces</div>
@@ -138,7 +138,7 @@ export default function Home() {
             <div className="space-y-6 pt-6">
                 <div className="flex items-center justify-between border-b border-border pb-4">
                     <h2 className={`${outfit.className} text-2xl font-bold text-foreground flex items-center gap-2`}>
-                        <Briefcase size={22} className="text-primary" />
+                        <Briefcase size={22} className="text-indigo-500" />
                         Professional Journey
                     </h2>
                 </div>
@@ -146,7 +146,7 @@ export default function Home() {
                 <div className="relative border-l-2 border-border ml-3 pl-6 space-y-10 py-2">
                     {/* Position 1: TBPCODOT */}
                     <div className="relative animate-in fade-in slide-in-from-left-4 duration-300">
-                        <span className="absolute -left-[31px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary ring-4 ring-background" />
+                        <span className="absolute -left-[31px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-blue-500 ring-4 ring-background" />
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
                             <div>
                                 <h3 className={`${outfit.className} text-lg font-bold text-foreground`}>
@@ -171,7 +171,7 @@ export default function Home() {
 
                     {/* Position 2: OLA */}
                     <div className="relative animate-in fade-in slide-in-from-left-4 duration-400">
-                        <span className="absolute -left-[31px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-border ring-4 ring-background" />
+                        <span className="absolute -left-[31px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-emerald-500 ring-4 ring-background" />
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
                             <div>
                                 <h3 className={`${outfit.className} text-lg font-bold text-foreground`}>
@@ -195,7 +195,7 @@ export default function Home() {
 
                     {/* Position 3: AEONS */}
                     <div className="relative animate-in fade-in slide-in-from-left-4 duration-500">
-                        <span className="absolute -left-[31px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-border ring-4 ring-background" />
+                        <span className="absolute -left-[31px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-purple-500 ring-4 ring-background" />
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
                             <div>
                                 <h3 className={`${outfit.className} text-lg font-bold text-foreground`}>

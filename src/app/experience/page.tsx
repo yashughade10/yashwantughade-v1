@@ -30,10 +30,10 @@ function ProductHighlight({ name, description, details, tech }: ProductProps) {
     return (
         <div className="p-6 rounded-2xl border border-border bg-card/60 backdrop-blur-md space-y-4 hover:border-primary/40 hover:shadow-lg transition-all duration-300 group">
             <div className="space-y-1">
-                <h4 className={`${outfit.className} text-lg font-bold text-foreground group-hover:text-primary transition-colors flex items-center gap-2`}>
+                <h4 className={`${outfit.className} text-lg font-bold text-foreground group-hover:text-blue-500 transition-colors flex items-center gap-2`}>
                     {name}
                 </h4>
-                <p className={`${figtree.className} text-xs text-primary font-semibold tracking-wider uppercase`}>{description}</p>
+                <p className={`${figtree.className} text-xs text-blue-500 font-semibold tracking-wider uppercase`}>{description}</p>
             </div>
             
             <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-4">
@@ -68,10 +68,10 @@ function ExperienceBlock({ role, company, period, location, description, product
             <div className="space-y-4">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                     <div>
-                        <h3 className={`${outfit.className} text-xl font-bold text-foreground group-hover/timeline:text-primary transition-colors`}>
+                        <h3 className={`${outfit.className} text-xl font-bold text-foreground group-hover/timeline:text-indigo-500 transition-colors`}>
                             {role}
                         </h3>
-                        <div className="text-base font-bold text-primary mt-0.5 flex items-center gap-2">
+                        <div className="text-base font-bold text-indigo-500 mt-0.5 flex items-center gap-2">
                             {company}
                         </div>
                     </div>
@@ -191,7 +191,7 @@ export default function ExperiencePage() {
             {/* Header */}
             <div className="space-y-3 border-b border-border pb-4">
                 <h1 className={`${outfit.className} text-3xl md:text-4xl font-bold text-foreground flex items-center gap-3`}>
-                    <Briefcase className="text-primary" size={28} />
+                    <Briefcase className="text-indigo-500" size={28} />
                     Work Experience
                 </h1>
                 <p className="text-muted-foreground text-sm md:text-base">

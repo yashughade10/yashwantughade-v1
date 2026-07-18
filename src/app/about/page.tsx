@@ -69,14 +69,14 @@ export default function AboutPage() {
                 <div className="p-6 rounded-2xl bg-card border border-border space-y-4 shadow-lg flex flex-col justify-between relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-full blur-xl group-hover:scale-125 transition-transform" />
                     <div>
-                        <div className="flex items-center gap-2 text-primary">
+                        <div className="flex items-center gap-2 text-indigo-500">
                             <GraduationCap size={22} />
                             <h4 className={`${outfit.className} font-bold text-foreground`}>Education</h4>
                         </div>
                         <div className="mt-4 space-y-2 text-sm">
                             <h5 className="font-bold text-foreground">SGGS Institute of Engineering & Technology</h5>
                             <p className="text-xs text-muted-foreground">Nanded, Maharashtra, India</p>
-                            <p className="text-xs font-bold text-primary mt-2">B.Tech in Electronics and Communication Engineering</p>
+                            <p className="text-xs font-bold text-indigo-500 mt-2">B.Tech in Electronics and Communication Engineering</p>
                             <p className="text-xs font-semibold text-muted-foreground">Graduated in 2023</p>
                         </div>
                     </div>
@@ -86,14 +86,14 @@ export default function AboutPage() {
             {/* Technical Skills */}
             <div className="space-y-6">
                 <h3 className={`${outfit.className} text-lg font-bold text-foreground flex items-center gap-2 border-b border-border/50 pb-2`}>
-                    <Code2 size={22} className="text-primary" />
+                    <Code2 size={22} className="text-blue-500" />
                     Technical Skills
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Languages */}
                     <div className="p-5 rounded-2xl bg-card border border-border space-y-3 hover:border-primary/30 transition-colors">
-                        <div className="flex items-center gap-2 text-primary">
+                        <div className="flex items-center gap-2 text-blue-500">
                             <Cpu size={18} />
                             <h4 className={`${outfit.className} font-bold text-foreground text-sm`}>Languages</h4>
                         </div>
@@ -173,7 +173,7 @@ export default function AboutPage() {
                 {/* Engineering Philosophy */}
                 <div className="p-6 rounded-2xl bg-card border border-border space-y-4 shadow-md flex flex-col justify-between">
                     <div>
-                        <div className="flex items-center gap-2 text-primary mb-3">
+                        <div className="flex items-center gap-2 text-yellow-500 mb-3">
                             <Lightbulb size={20} />
                             <h4 className={`${outfit.className} font-bold text-foreground`}>Engineering Philosophy</h4>
                         </div>
@@ -183,7 +183,7 @@ export default function AboutPage() {
                     </div>
                     <div className="flex flex-wrap gap-2 pt-4">
                         {["Scalable", "Maintainable", "Performant", "Accessible", "User-Centric"].map((val) => (
-                            <span key={val} className={`${figtree.className} px-2.5 py-0.5 text-xs font-bold bg-primary/10 text-primary rounded-full border border-primary/20`}>
+                            <span key={val} className={`${figtree.className} px-2.5 py-0.5 text-xs font-bold bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 rounded-full border border-yellow-500/20`}>
                                 {val}
                             </span>
                         ))}
@@ -198,11 +198,11 @@ export default function AboutPage() {
                     </div>
                     <div className="space-y-4 text-sm">
                         <div className="space-y-1">
-                            <span className="font-bold text-foreground text-xs uppercase tracking-wider text-primary">Short Term Goal</span>
+                            <span className="font-bold text-foreground text-xs uppercase tracking-wider text-indigo-500">Short Term Goal</span>
                             <p className="text-muted-foreground leading-relaxed">{careerGoals.shortTerm}</p>
                         </div>
                         <div className="space-y-1">
-                            <span className="font-bold text-foreground text-xs uppercase tracking-wider text-primary">Long Term Goal</span>
+                            <span className="font-bold text-foreground text-xs uppercase tracking-wider text-indigo-500">Long Term Goal</span>
                             <p className="text-muted-foreground leading-relaxed">{careerGoals.longTerm}</p>
                         </div>
                     </div>
@@ -220,7 +220,7 @@ export default function AboutPage() {
                     <ul className="space-y-3 text-sm text-muted-foreground">
                         {funFacts.map((fact, index) => (
                             <li key={index} className="flex items-start gap-2.5">
-                                <CheckCircle size={16} className="text-primary shrink-0 mt-0.5" />
+                                <CheckCircle size={16} className="text-pink-500 shrink-0 mt-0.5" />
                                 <span>{fact}</span>
                             </li>
                         ))}
@@ -230,7 +230,7 @@ export default function AboutPage() {
                 {/* Languages Known & Interests */}
                 <div className="p-6 rounded-2xl bg-card border border-border space-y-4 shadow-md flex flex-col justify-between">
                     <div>
-                        <div className="flex items-center gap-2 text-primary mb-3">
+                        <div className="flex items-center gap-2 text-yellow-500 mb-3">
                             <Languages size={20} />
                             <h4 className={`${outfit.className} font-bold text-foreground`}>Languages</h4>
                         </div>
@@ -242,7 +242,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="pt-4 border-t border-border/50">
-                        <div className="flex items-center gap-2 text-primary mb-3">
+                        <div className="flex items-center gap-2 text-yellow-500 mb-3">
                             <Heart size={18} />
                             <h4 className={`${outfit.className} font-bold text-foreground text-xs uppercase tracking-wider`}>Interests</h4>
                         </div>
