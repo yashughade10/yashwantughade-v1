@@ -61,9 +61,9 @@ const SpotlightBanner = () => {
                                     <Image
                                         src="/profile-yellow-bg.png"
                                         alt="Profile"
-                                        width={100}
-                                        height={100}
-                                        className="h-20 w-20 rounded-full border-4 border-border object-cover sm:h-20 sm:w-20"
+                                        width={128}
+                                        height={128}
+                                        className="h-24 w-24 rounded-full border-4 border-border object-cover sm:h-32 sm:w-32"
                                     />
                                 </div>
 
