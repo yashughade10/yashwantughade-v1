@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { useContactModal } from "@/hooks/use-contact-modal";
 import { Mail, Phone, X, Send, CheckCircle2, Loader2 } from "lucide-react";
+import { sendEmailAction } from "@/app/actions/send-email";
+import { inter, outfit } from "@/lib/fonts";
 
 export function ContactModal() {
     const { isOpen, closeModal } = useContactModal();
@@ -13,30 +15,34 @@ export function ContactModal() {
 
     if (!isOpen) return null;
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!name || !email || !message) return;
 
         setStatus("sending");
         
-        // Open user's email client pre-filled
-        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-        const body = encodeURIComponent(
-            `Hi Yashwant,\n\nYou have received a message from your portfolio contact form.\n\nFrom: ${name} (${email})\n\nMessage:\n${message}`
-        );
-        
-        window.location.href = `mailto:yashwantughade10@gmail.com?subject=${subject}&body=${body}`;
-
-        setTimeout(() => {
-            setStatus("success");
-            setName("");
-            setEmail("");
-            setMessage("");
-        }, 1000);
+        try {
+            const result = await sendEmailAction({ name, email, message });
+            
+            if (result.success) {
+                setStatus("success");
+                setName("");
+                setEmail("");
+                setMessage("");
+            } else {
+                console.error("Email send failed:", result.error);
+                alert("Failed to send message. Please try again.");
+                setStatus("idle");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            alert("An error occurred. Please try again later.");
+            setStatus("idle");
+        }
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+        <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200 ${inter.className}`}>
             <div 
                 className="relative w-full max-w-3xl overflow-hidden rounded-2xl border border-border bg-card text-card-foreground shadow-2xl animate-in zoom-in-95 duration-200"
                 onClick={(e) => e.stopPropagation()}
@@ -56,7 +62,7 @@ export function ContactModal() {
                     {/* Left Info Column */}
                     <div className="md:col-span-2 p-6 md:p-8 bg-muted/30 border-b md:border-b-0 md:border-r border-border flex flex-col justify-between">
                         <div>
-                            <h3 className="text-2xl font-bold tracking-tight text-foreground font-heading">
+                            <h3 className={`text-2xl font-bold tracking-tight text-foreground ${outfit.className}`}>
                                 Let&apos;s Connect
                             </h3>
                             <p className="mt-2 text-sm text-muted-foreground">
@@ -71,7 +77,7 @@ export function ContactModal() {
                                     <div className="p-2.5 rounded-lg bg-background border border-border">
                                         <Mail size={16} className="text-primary" />
                                     </div>
-                                    <span className="truncate">yashwantughade10@gmail.com</span>
+                                    <span className="break-all">yashwantughade10@gmail.com</span>
                                 </a>
 
                                 <a
