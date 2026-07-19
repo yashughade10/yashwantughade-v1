@@ -18,8 +18,8 @@ function ProjectCard(props: ProjectProps) {
     return (
         <div className="p-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4 relative animate-in fade-in duration-300">
             {/* The outer box now adapts to light/dark themes with elegant border colors */}
-            <div className="h-full border border-border bg-card text-card-foreground rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="relative group overflow-hidden bg-muted">
+            <div className="h-full border border-border bg-card text-card-foreground rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+                <div className="relative group overflow-hidden">
                     {/* Project Preview Image */}
                     <Image className="w-full aspect-[16/10] object-cover object-center group-hover:scale-105 transition-transform duration-300" src={props.imgSrc} alt={props.title} width={600} height={375} unoptimized />
 
@@ -37,12 +37,12 @@ function ProjectCard(props: ProjectProps) {
                     </div>
                 </div>
 
-                <div className="p-4 space-y-3">
+                <div className="p-4 space-y-3 flex flex-col flex-1">
                     <h2 className={`${outfit.className} text-lg font-bold text-foreground tracking-tight`}>{props.title}</h2>
-                    <p className="leading-relaxed text-sm text-muted-foreground h-[100px] overflow-y-auto pr-1 scrollbar-thin">
+                    <p className="leading-relaxed text-sm text-muted-foreground flex-1">
                         {props.details}
                     </p>
-                    <div className="flex flex-wrap items-center pt-2">
+                    <div className="flex flex-wrap items-center pt-2 mt-auto">
                         <a href={props.github} target="_blank" rel="noreferrer" className={`${figtree.className} text-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 font-semibold text-sm inline-flex items-center cursor-pointer gap-1.5 transition-colors`}>
                             {props.more}
                             <svg className="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -70,7 +70,7 @@ export default function ProjectsPage() {
         {
             title: "Tech-Beat",
             details: "Built a fully functional, high-fidelity e-commerce UI for an online electronics store. Features central state management with Redux, dynamic search, multi-criteria filtering, and smooth cart transitions.",
-            imgSrc: "/tech_beat.png",
+            imgSrc: "/image.png",
             preview: "https://e-commerce-tech-shop.vercel.app/",
             github: "https://github.com/yashughade10/E-commerce-Tech-Shop",
             more: "Live Preview"
@@ -78,7 +78,7 @@ export default function ProjectsPage() {
         {
             title: "EngageSync",
             details: "A modern SaaS synchronization dashboard for contacts and team directory management. Features status tracking indicators, quick synchronization hooks, and a crisp, responsive layout.",
-            imgSrc: "/engage_sync.png",
+            imgSrc: "image2.png",
             preview: "https://engage-sync.vercel.app/contacts/list",
             github: "https://github.com/yashughade10",
             more: "Live Preview"
