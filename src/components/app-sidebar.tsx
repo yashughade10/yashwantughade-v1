@@ -25,6 +25,7 @@ import {
     User2Icon,
 } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { inter, figtree, outfit } from "@/lib/fonts";
 
 type NavItem = {
@@ -84,7 +85,7 @@ const data: { navMain: NavGroup[] } = {
                     title: "LinkedIn",
                     url: "https://www.linkedin.com/in/yashwant-ughade-a04682220/",
                     icon: <QrCode />,
-                    isActive: true,
+                    // isActive: true,
                 },
                 {
                     title: "Leetcode",
@@ -107,6 +108,8 @@ const data: { navMain: NavGroup[] } = {
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+    const pathname = usePathname();
+
     return (
         <Sidebar collapsible="icon" className={inter.className} {...props}>
             <SidebarHeader>
@@ -142,7 +145,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                                     <SidebarMenuItem key={item.title}>
                                         <SidebarMenuButton
                                             asChild
-                                            isActive={item.isActive}
+                                            isActive={item.url === pathname || item.isActive}
                                             tooltip={item.title}
                                             className="py-2!"
                                         >
