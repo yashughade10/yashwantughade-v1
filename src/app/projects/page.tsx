@@ -90,7 +90,7 @@ export default function ProjectsPage() {
             {/* Header */}
             <div className="space-y-3 border-b border-border pb-4">
                 <h1 className={`${outfit.className} text-3xl md:text-4xl font-bold text-foreground flex items-center gap-2`}>
-                    <ListCollapse className="text-indigo-500" size={28} />
+                    {/* <ListCollapse className="text-indigo-500" size={28} /> */}
                     Projects
                 </h1>
                 <p className="text-muted-foreground text-sm md:text-base">

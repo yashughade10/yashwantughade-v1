@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { 
-    Briefcase, 
+import {
+    Briefcase,
     Calendar,
     MapPin
 } from "lucide-react";
@@ -35,7 +35,7 @@ function ProductHighlight({ name, description, details, tech }: ProductProps) {
                 </h4>
                 <p className={`${figtree.className} text-xs text-blue-500 font-semibold tracking-wider uppercase`}>{description}</p>
             </div>
-            
+
             <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-4">
                 {details.map((detail, idx) => (
                     <li key={idx} className="leading-relaxed">{detail}</li>
@@ -44,8 +44,8 @@ function ProductHighlight({ name, description, details, tech }: ProductProps) {
 
             <div className="flex flex-wrap gap-1.5 pt-2">
                 {tech.map((t) => (
-                    <span 
-                        key={t} 
+                    <span
+                        key={t}
                         className={`${figtree.className} px-2.5 py-0.5 text-[10px] font-bold border rounded-md ${getSkillColor(t)}`}
                     >
                         {t}
@@ -191,7 +191,7 @@ export default function ExperiencePage() {
             {/* Header */}
             <div className="space-y-3 border-b border-border pb-4">
                 <h1 className={`${outfit.className} text-3xl md:text-4xl font-bold text-foreground flex items-center gap-3`}>
-                    <Briefcase className="text-indigo-500" size={28} />
+                    {/* <Briefcase className="text-indigo-500" size={28} /> */}
                     Work Experience
                 </h1>
                 <p className="text-muted-foreground text-sm md:text-base">
