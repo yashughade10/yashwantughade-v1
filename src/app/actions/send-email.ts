@@ -2,7 +2,7 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend("re_GRE35vg1_22xDYj7EGoJ3FMCLKc1HRmrQ");
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmailAction(formData: { name: string; email: string; message: string }) {
     try {
